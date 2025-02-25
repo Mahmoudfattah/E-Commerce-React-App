@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/E-Commerce-React-App/static/css/main.324818cf.css",
-    "main.js": "/E-Commerce-React-App/static/js/main.05d14b8f.js",
+    "main.css": "/E-Commerce-React-App/static/css/main.a9681458.css",
+    "main.js": "/E-Commerce-React-App/static/js/main.20c22810.js",
     "static/js/488.5f1067de.chunk.js": "/E-Commerce-React-App/static/js/488.5f1067de.chunk.js",
-    "static/media/light-patten.svg": "/E-Commerce-React-App/static/media/light-patten.ed706aff39a009de4e80.svg",
+    "static/media/light-patten.svg": "/E-Commerce-React-App/static/media/light-patten.8fc125e426169ad76c52.svg",
     "static/media/slider-2.jpeg": "/E-Commerce-React-App/static/media/slider-2.92200ddb54f84e0e8c71.jpeg",
     "static/media/fa-solid-900.ttf": "/E-Commerce-React-App/static/media/fa-solid-900.2582b0e4bcf85eceead0.ttf",
     "static/media/slider-image-1.jpeg": "/E-Commerce-React-App/static/media/slider-image-1.3c3940ee0f1c3b17ff9a.jpeg",
@@ -19,19 +19,19 @@
     "static/media/fa-regular-400.woff2": "/E-Commerce-React-App/static/media/fa-regular-400.89999bdf5d835c012025.woff2",
     "static/media/signin-DlR7P608.png": "/E-Commerce-React-App/static/media/signin-DlR7P608.dd98b01bd649851703c5.png",
     "static/media/fa-v4compatibility.ttf": "/E-Commerce-React-App/static/media/fa-v4compatibility.da94ef451f4969af06e6.ttf",
-    "static/media/freshcart-logo.svg": "/E-Commerce-React-App/static/media/freshcart-logo.53f7a424c3aedc30a0fb46dc2278137c.svg",
+    "static/media/freshcart-logo.svg": "/E-Commerce-React-App/static/media/freshcart-logo.af33f2cb2a100f447f3b8c388932e12a.svg",
     "static/media/fa-v4compatibility.woff2": "/E-Commerce-React-App/static/media/fa-v4compatibility.ea8f94e1d22e0d35ccd4.woff2",
     "static/media/slick.svg": "/E-Commerce-React-App/static/media/slick.2630a3e3eab21c607e21.svg",
     "static/media/slick.eot": "/E-Commerce-React-App/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/E-Commerce-React-App/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/E-Commerce-React-App/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/E-Commerce-React-App/index.html",
-    "main.324818cf.css.map": "/E-Commerce-React-App/static/css/main.324818cf.css.map",
-    "main.05d14b8f.js.map": "/E-Commerce-React-App/static/js/main.05d14b8f.js.map",
+    "main.a9681458.css.map": "/E-Commerce-React-App/static/css/main.a9681458.css.map",
+    "main.20c22810.js.map": "/E-Commerce-React-App/static/js/main.20c22810.js.map",
     "488.5f1067de.chunk.js.map": "/E-Commerce-React-App/static/js/488.5f1067de.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.324818cf.css",
-    "static/js/main.05d14b8f.js"
+    "static/css/main.a9681458.css",
+    "static/js/main.20c22810.js"
   ]
 }
