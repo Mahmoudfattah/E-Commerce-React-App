@@ -26,6 +26,7 @@ export default function Cart() {
      
        if (data ) {
         setData(data);
+      
       } else {
         setData({ data: { products: [] } }); // تعيين قائمة فارغة عند عدم وجود بيانات
       }
@@ -89,7 +90,7 @@ export default function Cart() {
                       Total Price: <span className="text-main">{data?.data?.totalCartPrice ?? 0} EGP</span>
                     </h5>
                     <h5 className="text-gray fw-bolder">
-                      Total Number: <span className="text-main">{data?.data?.numOfCartItems ?? 0}</span>
+                      Total Number: <span className="text-main">{data?.numOfCartItems ?? 0}</span>
                     </h5>
                   </div>
       

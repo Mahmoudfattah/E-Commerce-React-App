@@ -63,61 +63,7 @@ export default function Navbar() {
       }
   }, [userDetails, setUserDetails]); 
 
-//     return <>
 
-
-
-
-
- 
-
-//   <div className="dropdown px-1" style={{ zIndex: 1040 }}>
-//     <button 
-//       type="button" 
-//       className="btn bg-main rounded-circle text-white fw-bold fs-6 text-center" 
-//       data-bs-toggle="dropdown" 
-//       aria-expanded="false"
-//       style={{ width: "33px", height: "33px", display: "flex", alignItems: "center", justifyContent: "center" }}
-//     >
-//       {userDetails?.name?.slice(0,1).toUpperCase() || "U"}
-//     </button>
-//     <ul className="dropdown-menu dropdown-menu-end  py-0 w-44">
-//       <li>
-//         <p className="dropdown-item pt-2 text-sm text-gray-900 px-2 mb-0">
-//           <span className="text-main fw-bolder">{userDetails?.name || 'No Name'}</span>
-//           <p className="pt-2 fw-bold">{userDetails?.email || 'No Email'}</p>
-//         </p>
-//       </li>
-//       <li><hr className="dropdown-divider py-0 my-0 bg-main" /></li>
-//       <li>
-//         <Link className="dropdown-item my-0 bg-transparent" to="#">
-//           {userToken !== null ? (
-//             <li className="nav-item">
-//               <span className="nav-l py-1 fw-bold px-0 cursor-pointer" onClick={logOut}>Logout</span>
-//             </li>
-//           ) : (
-//             <>
-//               <li className="nav-item">
-//                 <Link className="nav-link" to="login">Login</Link>
-//               </li>
-//               <li className="nav-item">
-//                 <Link className="nav-link" to="register">Register</Link>
-//               </li>
-//             </>
-//           )}
-//         </Link>
-//       </li>
-//     </ul>
-//   </div>
-// </div>
-
-    
-//     </div>
-//   </div>
-// </nav>
-
-  
-//     </>
 
 return (
   <>

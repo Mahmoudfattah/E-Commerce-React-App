@@ -1,505 +1,530 @@
 {
 
-  
+  
 
+
 
+"name": "app1",
 
-  "name": "app1",
+  
 
-  
+
 
+"version": "0.1.0",
 
+  
 
-  "version": "0.1.0",
+
 
-  
+"private": true,
 
+  
 
+
 
-  "private": true,
+"homepage": "https://mahmoudfattah.github.io/E-Commerce-React-App",
 
-  
+  
 
+
 
+"dependencies": {
 
-  "homepage": "https://mahmoudfattah.github.io/E-Commerce-React-App",
+  
 
-  
+
 
+  
 
+
 
-  "dependencies": {
+"@fortawesome/fontawesome-free": "^6.7.2",
 
-  
+  
 
+
 
+  
 
-    
+
 
+"@tanstack/query-core": "^5.66.4",
 
+  
 
-  "@fortawesome/fontawesome-free": "^6.7.2",
+
 
-  
+  
 
+
 
+"@tanstack/react-query": "^5.66.9",
 
-    
+  
 
+
 
+  
 
-  "@tanstack/react-query": "^5.66.3",
+
 
-  
+"axios": "^1.7.9",
 
+  
 
+
 
-    
+  
 
+
 
+"axois": "^0.0.1-security",
 
-  "axios": "^1.7.9",
+  
 
-  
+
 
+  
 
+
 
-    
+"bootstrap": "^5.3.3",
 
+  
 
+
 
-  "axois": "^0.0.1-security",
+  
 
-  
+
 
+"cra-template": "1.2.0",
 
+  
 
-    
+
 
+  
 
+
 
-  "bootstrap": "^5.3.3",
+"formik": "^2.4.6",
 
-  
+  
 
+
 
+  
 
-    
+
 
+"react": "^18.3.1",
 
+  
 
-  "cra-template": "1.2.0",
+
 
-  
+  
 
+
 
+"react-dom": "^18.3.1",
 
-    
+  
 
+
 
+  
 
-  "formik": "^2.4.6",
+
 
-  
+"react-hot-toast": "^2.5.2",
 
+  
 
+
 
-    
+  
 
+
 
+"react-icons": "^5.5.0",
 
-  "react": "^18.3.1",
+  
 
-  
+
 
+  
 
+
 
-    
+"react-loader-spinner": "^6.1.6",
 
+  
 
+
 
-  "react-dom": "^18.3.1",
+  
 
-  
+
 
+"react-modal": "^3.16.3",
 
+  
 
-    
+
 
+  
 
+
 
-  "react-hot-toast": "^2.5.2",
+"react-router-dom": "^6.29.0",
 
-  
+  
 
+
 
+  
 
-    
+
 
+"react-scripts": "^5.0.1",
 
+  
 
-  "react-icons": "^5.5.0",
+
 
-  
+  
 
+
 
+"react-slick": "^0.30.3",
 
-    
+  
 
+
 
+  
 
-  "react-loader-spinner": "^6.1.6",
+
 
-  
+"slick-carousel": "^1.8.1",
 
+  
 
+
 
-    
+  
 
+
 
+"web-vitals": "^4.2.4",
 
-  "react-modal": "^3.16.3",
+  
 
-  
+
 
+  
 
+
 
-    
+"yup": "^1.6.1"
 
+  
 
+
 
-  "react-router-dom": "^7.1.5",
+},
 
-  
+  
 
+
 
+"scripts": {
 
-    
+  
 
+
 
+  
 
-  "react-scripts": "^3.0.1",
+
 
-  
+"start": "react-scripts start",
 
+  
 
+
 
-    
+  
 
+
 
+"build": "react-scripts build",
 
-  "react-slick": "^0.30.3",
+  
 
-  
+
 
+  
 
+
 
-    
+"test": "react-scripts test",
 
+  
 
+
 
-  "slick-carousel": "^1.8.1",
+  
 
-  
+
 
+"eject": "react-scripts eject",
 
+  
 
-    
+
 
+  
 
+
 
-  "web-vitals": "^4.2.4",
+"predeploy": "npm run build",
 
-  
+  
 
+
 
+  
 
-    
+
 
+"deploy": "gh-pages -d build"
 
+  
 
-  "yup": "^1.6.1"
+
 
-  
+},
 
+  
 
+
 
-  },
+"eslintConfig": {
 
-  
+  
 
+
 
+  
 
-  "scripts": {
+
 
-  
+"extends": [
 
+  
 
+
 
-    
+  
 
+
 
+  
 
-  "start": "react-scripts start",
+
 
-  
+"react-app",
 
+  
 
+
 
-    
+  
 
+
 
+  
 
-  "build": "react-scripts build",
+
 
-  
+"react-app/jest"
 
+  
 
+
 
-    
+  
 
+
 
+]
 
-  "test": "react-scripts test",
+  
 
-  
+
 
+},
 
+  
 
-    
+
 
+"browserslist": {
 
+  
 
-  "eject": "react-scripts eject",
+
 
-  
-  
-  "predeploy": "npm run build",
-  "deploy": "gh-pages -d build"
+  
 
+
 
+"production": [
 
+  
 
+
 
-  },
+  
 
-  
+
 
+  
 
+
 
-  "eslintConfig": {
+">0.2%",
 
-  
+  
 
+
 
+  
 
-    
+
 
+  
 
+
 
-  "extends": [
+"not dead",
 
-  
+  
 
+
 
+  
 
-    
+
 
+  
 
+
 
-    
+"not op_mini all"
 
+  
 
+
 
-  "react-app",
+  
 
-  
+
 
+],
 
+  
 
-    
+
 
+  
 
+
 
-    
+"development": [
 
+  
 
+
 
-  "react-app/jest"
+  
 
-  
+
 
+  
 
+
 
-    
+"last 1 chrome version",
 
+  
 
+
 
-  ]
+  
 
-  
+
 
+  
 
+
 
-  },
+"last 1 firefox version",
 
-  
+  
 
+
 
+  
 
-  "browserslist": {
+
 
-  
+  
 
+
 
+"last 1 safari version"
 
-    
+  
 
+
 
+  
 
-  "production": [
+
 
-  
+]
 
+  
 
+
 
-    
+},
 
+  
 
+
 
-    
+"devDependencies": {
 
+  
 
+
 
-  ">0.2%",
+  
 
-  
+
 
+"gh-pages": "^6.3.0"
 
+  
 
-    
+
 
-
-
-    
-
-
-
-  "not dead",
-
-  
-
-
-
-    
-
-
-
-    
-
-
-
-  "not op_mini all"
-
-  
-
-
-
-    
-
-
-
-  ],
-
-  
-
-
-
-    
-
-
-
-  "development": [
-
-  
-
-
-
-    
-
-
-
-    
-
-
-
-  "last 1 chrome version",
-
-  
-
-
-
-    
-
-
-
-    
-
-
-
-  "last 1 firefox version",
-
-  
-
-
-
-    
-
-
-
-    
-
-
-
-  "last 1 safari version"
-
-  
-
-
-
-    
-
-
-
-  ]
-
-  
-
-
-
-  },
-
-  
-
-
-
-  "devDependencies": {
-
-  
-
-
-
-    
-
-
-
-  "gh-pages": "^6.3.0"
-
-  
-
-
-
-  }
+}
 
 }
 
