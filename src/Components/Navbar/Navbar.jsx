@@ -5,7 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import logo from '../../Assets/images/freshcart-logo.svg'
 import {Context} from '../../Context/CartContext';
 import { UserContext } from '../../Context/UserContext'
-import { useQuery} from '@tanstack/react-query';
+import { useQuery } from '@tanstack/react-query';
 
 
 
@@ -20,7 +20,6 @@ export default function Navbar() {
   let navigate =useNavigate();
 
 
-
   let {cartProducts,wishList}=useContext(Context)
 
 
@@ -31,8 +30,6 @@ export default function Navbar() {
     queryKey: ['cartproducts'],
     queryFn: viewCartProducts,
   });
-  
-  // تحديث العدد عند تغيير بيانات السلة
   let totalCount = cartData?.data?.numOfCartItems || 0;
 
   // جلب بيانات قائمة المفضلة (wishlist)

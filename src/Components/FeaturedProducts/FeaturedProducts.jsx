@@ -25,8 +25,7 @@ export default function FeaturedProducts() {
   // إضافة منتج للسلة
   async function addProductToCart(productId) {
     let response = await addProductCart(productId);
-    console.log('Cart Response:', response); // 🔍 تحقق مما تعيده الدالة
-    if (response.status === 'success') {
+    if (response.data.status === 'success') {
       toast.success('Product added successfully', { className: 'bg-black text-white' });
     } else {
       toast.error('Please try again');
@@ -36,7 +35,7 @@ export default function FeaturedProducts() {
   // إضافة منتج للمفضلة وتغيير شكل القلب
   async function addProductToWishList(productId) {
     let response = await addToWishList(productId);
-    if (response.status === 'success') {
+    if (response.data.status === 'success') {
       toast.success('Product added To Wishlist', { className: 'bg-black text-white' });
     } else {
       toast.error('Please try again');
