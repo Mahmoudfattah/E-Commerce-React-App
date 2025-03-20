@@ -3,6 +3,10 @@
 import axios from "axios";
 import React , {createContext, useState,useEffect } from "react"
 
+import { useQueryClient } from '@tanstack/react-query';
+
+
+
       
       let headers= {
         token:  localStorage.getItem('userToken')
@@ -12,16 +16,42 @@ import React , {createContext, useState,useEffect } from "react"
 
     export default function ContextProvider(props){
 
+      const queryClient = useQueryClient(); // استخدم Query Client
+
       const [cartId,setcartId] = useState(null)
  
-       function addProductCart (productId){
-     
-        return  axios.post(`https://ecommerce.routemisr.com/api/v1/cart`,{
-          productId:productId 
-        },{
-         headers:headers
-        }).then((res)=>res).catch((err)=>err)            
-       }
+      async function addProductCart(productId) {
+        try {
+          const response = await axios.post(
+            `https://ecommerce.routemisr.com/api/v1/cart`,
+            { productId },
+            { headers }
+          );
+    
+          queryClient.invalidateQueries(['cartproducts']); // تحديث بيانات السلة فورًا
+          return response.data; // إرجاع البيانات لاستخدامها في أي مكان آخر إذا لزم الأمر
+        } catch (error) {
+          console.error("Error adding product to cart:", error);
+          return null;
+        }
+      }
+
+      async function addToWishList(productId){
+       try{
+        const response = await axios.post(
+          `https://ecommerce.routemisr.com/api/v1/wishlist`,
+          { productId },
+          { headers }
+        );
+        queryClient.invalidateQueries(['wishList']); // تحديث بيانات السلة فورًا
+          return response.data; // إرجاع البيانات لاستخدامها في أي مكان آخر إذا لزم الأمر
+        } catch (error) {
+          console.error("Error adding product to cart:", error);
+          return null;
+        }
+      }
+
+
        function updateCountProduct(productId,count){
      
         return  axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,{
@@ -48,14 +78,7 @@ import React , {createContext, useState,useEffect } from "react"
             
       } 
   
-      function addToWishList(productId){
-
-        return  axios.post(`https://ecommerce.routemisr.com/api/v1/wishlist`,{
-          productId:productId 
-        },{
-         headers:headers
-        }).then((res)=>res).catch((err)=>err)            
-       }
+     
 
       function clearAll(){
 
