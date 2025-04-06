@@ -42,7 +42,7 @@ export default function WishList() {
   async function addProductToCart(productId) {
     try {
       const response = await addProductCart(productId);
-      if (response?.data?.status === 'success') {
+      if (response?.status === 'success') {
         toast.success('Product added successfully', { className: 'bg-black text-white' });
       } else {
         toast.error('Please try again');
@@ -55,13 +55,23 @@ export default function WishList() {
 
   useEffect(() => {
     viewWishList();
+   
+   
   }, []);
+  // useEffect(() => {
+  //   viewWishList();
+  //   const timer = setTimeout(() => {
+  //     window.location.reload();
+  //   }, 9000);
+    
+  //   return () => clearTimeout(timer); // Cleanup if the component unmounts
+  // }, []);
 
   return (
     <div className="container py-2 mt-5">
       <div className="row">
         <div className="d-flex align-content-center justify-content-between col-md-10 m-auto pt-5">
-          <h2 className="text-gray fw-bolder py-5">Shopping Cart</h2>
+          <h2 className="text-gray fw-bolder py-5">Wishing List</h2>
         </div>
         {data === null ? (
           <div className="d-flex justify-content-center align-items-center vh-100">
@@ -84,7 +94,10 @@ export default function WishList() {
                         <span className="text-main fw-bolder">{product.price} EGP</span>
                       </p>
                       <button
-                        onClick={() => removeProductFromWishList(product._id)}
+                        onClick={() => {
+                          removeProductFromWishList(product._id);
+                     
+                        }}
                         className="p-0 border-0 bg-transparent text-danger ps-1 fw-bolder"
                       >
                         <i className="fas fa-trash text-danger fs-5"></i> Remove

@@ -40,6 +40,10 @@ html::-webkit-scrollbar-thumb {
 html::-webkit-scrollbar-thumb:hover {
   background: #088a08; /* لون أغمق عند التمرير */
 }
+.nav-link.active {
+  color: #088a08 !important; /* اللون الذي تريده عندما يكون الرابط نشطًا */
+  font-weight: bold !important;
+}
 
 
 .rating-color
@@ -50,6 +54,10 @@ html::-webkit-scrollbar-thumb:hover {
 {
     cursor: pointer;
 }
+/* .cursor-pointer2
+{
+    cursor:  !important;
+} */
 a , a:hover{
     color: black !important;
     text-decoration: none !important;
@@ -122,12 +130,7 @@ a , a:hover{
     transform: scale(1.1);
   }
   
-  .nav-link:active {
-   color :#0aad0a ; /* Color when clicked */
-   font-weight: bold; /* Make text bold when clicked */
-   
-    
-  }
+ 
   
   /* Optionally, if the link is currently active from react-router, we can add an active class */
   /* .nav-link.active {

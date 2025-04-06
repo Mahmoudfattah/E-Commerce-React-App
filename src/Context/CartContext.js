@@ -10,7 +10,7 @@ import { useQueryClient } from '@tanstack/react-query';
 
 
 
-
+ // ضيف ده داخل الكمبوننت اللي فيه الدالة
 
       
       let headers= {
@@ -20,6 +20,7 @@ import { useQueryClient } from '@tanstack/react-query';
      export let Context= createContext();
 
     export default function ContextProvider(props){
+
 
       const queryClient = useQueryClient(); // استخدم Query Client
 
@@ -55,8 +56,26 @@ import { useQueryClient } from '@tanstack/react-query';
           return null;
         }
       }
+     
+      function removeProductsCart(productId){
 
+        return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,{
+             headers:headers
+        }).then((res)=> {queryClient.invalidateQueries(['cartproducts']);
+          return res;
+        }
+      ).catch((err)=>err)    
+          
+    } 
+      function removeFromWishList(productId){
 
+        return axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,{
+             headers:headers
+        }).then((res)=>{queryClient.invalidateQueries(['cartproducts']);
+          return res;
+        }).catch((err)=>err)    
+          
+    } 
        function updateCountProduct(productId,count){
      
         return  axios.put(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,{
@@ -92,20 +111,7 @@ import { useQueryClient } from '@tanstack/react-query';
           }).then((res)=>res).catch((err)=>err)    
             
       } 
-        function removeProductsCart(productId){
-
-          return axios.delete(`https://ecommerce.routemisr.com/api/v1/cart/${productId}`,{
-               headers:headers
-          }).then((res)=>res).catch((err)=>err)    
-            
-      } 
-        function removeFromWishList(productId){
-
-          return axios.delete(`https://ecommerce.routemisr.com/api/v1/wishlist/${productId}`,{
-               headers:headers
-          }).then((res)=>res).catch((err)=>err)    
-            
-      } 
+     
 
 
       function onlinePayment(cartId,valus,url){

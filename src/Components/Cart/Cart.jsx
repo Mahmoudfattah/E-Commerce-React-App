@@ -67,9 +67,19 @@ export default function Cart() {
 
        useEffect(()=>{
         viewCartProducts();
+    
         
-       },[])
+      }, []);
+      //  useEffect(()=>{
+      //   viewCartProducts();
+      //   const timer = setTimeout(() => {
+      //     window.location.reload();
+      //   }, 9000);
+        
+      //   return () => clearTimeout(timer); // Cleanup if the component unmounts
+      // }, []);
 
+       
   
  
        return (
@@ -110,7 +120,10 @@ export default function Cart() {
                                 <span className="text-main fw-bolder">{product.price} EGP</span>
                               </p>
                               <button
-                                onClick={() => removeCartProducts(product.product.id)}
+                               onClick={() => {
+                                  removeCartProducts(product.product.id);
+                                  // window.location.reload();
+                                }}
                                 className="p-0 border-0 bg-transparent text-danger ps-1 fw-bolder"
                               >
                                 <i className="fas fa-trash text-danger fs-5"></i> Remove
