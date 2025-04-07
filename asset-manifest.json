@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/E-Commerce-React-App/static/css/main.a9681458.css",
-    "main.js": "/E-Commerce-React-App/static/js/main.20c22810.js",
+    "main.css": "/E-Commerce-React-App/static/css/main.f2847ac4.css",
+    "main.js": "/E-Commerce-React-App/static/js/main.4488faac.js",
     "static/js/488.5f1067de.chunk.js": "/E-Commerce-React-App/static/js/488.5f1067de.chunk.js",
     "static/media/light-patten.svg": "/E-Commerce-React-App/static/media/light-patten.8fc125e426169ad76c52.svg",
     "static/media/slider-2.jpeg": "/E-Commerce-React-App/static/media/slider-2.92200ddb54f84e0e8c71.jpeg",
@@ -26,12 +26,12 @@
     "static/media/slick.ttf": "/E-Commerce-React-App/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/E-Commerce-React-App/static/media/slick.295183786cd8a1389865.woff",
     "index.html": "/E-Commerce-React-App/index.html",
-    "main.a9681458.css.map": "/E-Commerce-React-App/static/css/main.a9681458.css.map",
-    "main.20c22810.js.map": "/E-Commerce-React-App/static/js/main.20c22810.js.map",
+    "main.f2847ac4.css.map": "/E-Commerce-React-App/static/css/main.f2847ac4.css.map",
+    "main.4488faac.js.map": "/E-Commerce-React-App/static/js/main.4488faac.js.map",
     "488.5f1067de.chunk.js.map": "/E-Commerce-React-App/static/js/488.5f1067de.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.a9681458.css",
-    "static/js/main.20c22810.js"
+    "static/css/main.f2847ac4.css",
+    "static/js/main.4488faac.js"
   ]
 }
