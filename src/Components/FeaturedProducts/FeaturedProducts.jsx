@@ -7,8 +7,7 @@ import { Context } from '../../Context/CartContext';
 import toast from 'react-hot-toast';
 
 export default function FeaturedProducts() {
-  const { addProductCart, addToWishList } = useContext(Context);
-  // حالة لتتبع المنتجات المضافة للمفضلة: المفتاح هو product.id والقيمة true/false
+  const { addProductCart, addToWishList, removeFromWishList } = useContext(Context);
   const [wishlisted, setWishlisted] = useState({});
 
   function getFeaturedProducts() {
@@ -25,31 +24,42 @@ export default function FeaturedProducts() {
   // إضافة منتج للسلة
   async function addProductToCart(productId) {
     let response = await addProductCart(productId);
-
-
-
     if (response.status === 'success') {
-
       toast.success('Product added successfully', { className: 'bg-black text-white' });
     } else {
       toast.error('Please try again');
     }
   }
 
-  // إضافة منتج للمفضلة وتغيير شكل القلب
-  async function addProductToWishList(productId) {
-    let response = await addToWishList(productId);
-  
-
-    if (response.status === 'success') {
-
-      toast.success('Product added To Wishlist', { className: 'bg-black text-white' });
+  // إضافة أو إزالة منتج من المفضلة
+  async function toggleWishList(productId) {
+    if (wishlisted[productId]) {
+      // إذا كان المنتج موجودًا في المفضلة، نقوم بإزالته
+      let response = await removeFromWishList(productId);
+      if (response.data.status === 'success') {
+        setWishlisted((prev) => {
+          const updatedWishlisted = { ...prev };
+          delete updatedWishlisted[productId];
+          return updatedWishlisted;
+        });
+        toast.success('Product removed from Wishlist', { className: 'bg-black text-white' });
+      } else {
+        toast.error('Please try again');
+      }
     } else {
-      toast.error('Please try again');
+      // إذا لم يكن المنتج في المفضلة، نقوم بإضافته
+      let response = await addToWishList(productId);
+      if (response.status === 'success') {
+        setWishlisted((prev) => ({ ...prev, [productId]: true }));
+        toast.success('Product added to Wishlist', { className: 'bg-black text-white' });
+      } else {
+        toast.error('Please try again');
+      }
     }
   }
 
   if (error) return <p>Error: {error.message}</p>;
+
   return (
     <div className="container py-2 mt-5">
       <div className="row">
@@ -75,7 +85,6 @@ export default function FeaturedProducts() {
                     <span className="text-main fs-5 ps-2 fw-semibold pt-2">
                       {product.title.split(' ').slice(0, 2).join(' ')}
                     </span>
-                    {/* تغيير <p> إلى <span> لحل الخطأ */}
                     <span className="py-1 ps-2 fw-semibold d-block">
                       {product.slug.split('-').slice(0, 2).join('-')}
                     </span>
@@ -96,13 +105,7 @@ export default function FeaturedProducts() {
                     </button>
                     <Link
                       className="align-content-center"
-                      onClick={() => {
-                        addProductToWishList(product.id);
-                        setWishlisted((prev) => ({
-                          ...prev,
-                          [product.id]: !prev[product.id],
-                        }));
-                      }}
+                      onClick={() => toggleWishList(product.id)}
                     >
                       <i
                         className={`${wishlisted[product.id] ? 'fa-solid' : 'fa-regular'} fa-heart mx-2 fs-3`}
@@ -118,5 +121,4 @@ export default function FeaturedProducts() {
       </div>
     </div>
   );
-  
 }
